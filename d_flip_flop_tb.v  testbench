@@ -1,0 +1,27 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: Mycronic 
+// Engineer: Kranthi
+// 
+// Create Date: 03/24/2020 04:47:42 AM
+// Module Name: d_ff_tb
+// Project Name: D FLIP FLOP TESTBENCH
+
+//////////////////////////////////////////////////////////////////////////////////
+
+module d_ff_tb();
+    reg D;
+    reg clk;
+    wire Q;
+    
+    d_ff dut( .D(D), .clk(clk), .Q(Q));
+    
+    initial 
+        begin
+            D = 1'b0;  
+            clk = 1'b0;
+            #50
+          forever #18 D = ~ D;
+ end
+            always #50 clk = ~clk;
+endmodule
