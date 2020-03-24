@@ -1,0 +1,21 @@
+module all_gates(
+    input a,
+    input b,
+    output c,
+    output d,
+    output e,
+    output f,
+    output g,
+    output h,
+    output i
+    );
+    
+    assign c = ~a;      // NOT GATE 
+    assign d = a&b;     // AND GATE 
+    assign e = ~(a&b);  // NAND GATE
+    assign f = a|b;     // OR GATE
+    assign g = ~(a|b);  // NOR GATE
+    assign h = a^b;     // XOR GATE
+    assign i = ~(a^b);  // XNOR GATE
+    
+endmodule
