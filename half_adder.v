@@ -8,13 +8,13 @@
 
 
 module half_adder(
-    input a,
-    input b,
-    output sum,
-    output carry
+    input a,            // input a 
+    input b,            // input b
+    output sum,         // output sum
+    output carry        // output carry
     );
     
-    assign sum = a^b;
-    assign carry = a&b;
+    assign sum = a^b;       // sum = a XOR b
+    assign carry = a&b;     // carry = a AND b
     
 endmodule
