@@ -1,0 +1,65 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: Mycronics
+// Engineer: Kranthi 
+// Create Date: 03/24/2020 04:13:03 AM
+// Module Name: full_adder_tb
+
+
+module full_adder_tb();
+ reg a;
+ reg b;
+ reg cin;
+ wire sum;
+ wire carry;
+ 
+ full_adder dut( .a(a), .b(b), .cin(cin), .sum(sum), .carry(carry));
+ 
+ initial 
+    begin
+        a = 1'b0;
+        b = 1'b0;
+        cin = 1'b0;
+        #50
+        
+        a = 1'b0;
+        b = 1'b0;
+        cin = 1'b1;
+        #50
+        
+        a = 1'b0;
+        b = 1'b1;
+        cin = 1'b0;
+        #50
+        
+        a = 1'b0;
+        b = 1'b1;
+        cin = 1'b1;
+        #50
+        
+        a = 1'b1;
+        b = 1'b0;
+        cin = 1'b0;
+        #50
+        
+        a = 1'b1;
+        b = 1'b0;
+        cin = 1'b1;
+        #50
+        
+        a = 1'b1;
+        b = 1'b1;
+        cin = 1'b0;
+        #50
+        
+        a = 1'b1;
+        b = 1'b1;
+        cin = 1'b1;
+        #50
+        
+        $finish;
+    
+    end
+    
+
+endmodule
